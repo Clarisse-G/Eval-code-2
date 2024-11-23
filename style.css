@@ -7,7 +7,7 @@
 body {
    font-family: Arial, sans-serif;
    color: #000;
-   background-color: #f5f5f5;
+   background-color: #ffffff;
 }
 
 .header {
@@ -21,7 +21,9 @@ body {
    top: 0;
    width: 100%;
    z-index: 1000;
+   filter: drop-shadow(0px 5px 8px #E31936);
 }
+
 
 .logo {
    height: 40px;
@@ -33,9 +35,8 @@ body {
 
 
 .hero {
-   padding: 5rem 1rem 2rem;
-   text-align: center;
-   background-color: #fbe3e3;
+   padding: 7rem 1rem 3rem;
+   background-color: #ffffff;
 }
 
 .hero h1 {
@@ -43,13 +44,8 @@ body {
    font-weight: bold;
 }
 
-.hero p {
-   font-size: 1rem;
-   margin-top: 0.5rem;
-}
-
 .hero .highlight {
-   color: red;
+   color: #E31936;
    font-weight: bold;
 }
 
@@ -80,8 +76,13 @@ body {
    margin-bottom: 1rem;
 }
 
+
 .past-events .grid{
    margin-top: 15px;
+}
+.events .highlight {
+   color: #E31936;
+   font-weight: bold;
 }
 
 .grid {
