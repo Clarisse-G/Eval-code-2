@@ -21,11 +21,9 @@ body {
    top: 0;
    width: 100%;
    z-index: 1000;
+   filter: drop-shadow(0px 5px 8px #E31936);
 }
 
-.guttericontext {
-   display: flex; 
-}
 
 .logo {
    height: 40px;
@@ -37,8 +35,7 @@ body {
 
 
 .hero {
-   padding: 5rem 1rem 2rem;
-   text-align: center;
+   padding: 7rem 1rem 3rem;
    background-color: #ffffff;
 }
 
@@ -47,13 +44,8 @@ body {
    font-weight: bold;
 }
 
-.hero p {
-   font-size: 1rem;
-   margin-top: 0.5rem;
-}
-
 .hero .highlight {
-   color: red;
+   color: #E31936;
    font-weight: bold;
 }
 
@@ -65,6 +57,11 @@ body {
 .events h2 {
    font-size: 1.25rem;
    margin-bottom: 1rem;
+}
+
+.events .highlight {
+   color: #E31936;
+   font-weight: bold;
 }
 
 .grid {
