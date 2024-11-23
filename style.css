@@ -59,6 +59,7 @@ body {
    margin-bottom: 1rem;
 }
 
+
 .events .highlight {
    color: #E31936;
    font-weight: bold;
@@ -86,7 +87,7 @@ body {
    width: 100%;
    max-width: 300px;
    text-align: center;
-   background-color: red;
+   background-color: #E31936;
    color: #fff;
    border: none;
    border-radius: 5px;
@@ -94,6 +95,10 @@ body {
    cursor: pointer;
 }
 
+.btn:hover {
+   background-color: #E31936;
+   color: black;
+}
 
 .info {
    padding: 1.5rem 1rem;
