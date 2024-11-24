@@ -77,9 +77,12 @@ body {
 }
 
 
+<<<<<<< HEAD
 .past-events .grid{
    margin-top: 15px;
 }
+=======
+>>>>>>> dcfb166b67ee034f08dadcce3f73c970b898d5d0
 .events .highlight {
    color: #E31936;
    font-weight: bold;
@@ -107,7 +110,7 @@ body {
    width: 100%;
    max-width: 300px;
    text-align: center;
-   background-color: red;
+   background-color: #E31936;
    color: #fff;
    border: none;
    border-radius: 5px;
@@ -115,6 +118,10 @@ body {
    cursor: pointer;
 }
 
+.btn:hover {
+   background-color: #E31936;
+   color: black;
+}
 
 .info {
    padding: 1.5rem 1rem;
