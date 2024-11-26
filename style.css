@@ -52,9 +52,9 @@ body {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background-color: #000;
+   background-color: #000000;
    color: #fff;
-   padding: 1rem;
+   padding: 0rem;
    position: fixed;
    top: 0;
    width: 100%;
@@ -135,7 +135,7 @@ body {
 }
 
 .hero {
-   padding: 7rem 1rem 3rem;
+   padding: 10rem 1rem 3rem;
    background-color: #ffffff;
    
 }
@@ -419,11 +419,20 @@ body {
    text-align: center;
    padding: 1.5rem 1rem;
    background-color: #000;
+   color: #fff;
 }
 
 .footer .social-links a {
    display: inline-block;
    margin: 0.5rem;
    text-decoration: none;
-   padding-inline: 1rem;
+   padding-inline: 2rem;
+   padding-bottom: 1rem;
+   align-content: center;
+}
+
+.footer .social-links p {
+   display: inline-block;
+   padding-inline: 10rem;
+   padding-top: 2rem;
 }
