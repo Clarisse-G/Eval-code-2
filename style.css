@@ -4,8 +4,46 @@
    box-sizing: border-box;
 }
 
-body {
+/* styles.css */
+:root {
+   --background-light: #ffffff;
+   --text-light: #000000;
+   --background-dark: #000000;
+   --text-dark: #ffffff;
+}
+
+/* Mode clair (par défaut) */
+body .header .footer{
+   display: flex;
+   flex: 1;
+   background-color: var(--background-light);
+   color: var(--text-light);
    font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+header, footer {
+   padding: 1rem;
+   text-align: center;
+   background-color: var(--background-light);
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+   body {
+       background-color: var(--background-dark);
+       color: var(--text-dark);
+   }
+
+   header, footer {
+       background-color: var(--background-dark);
+   }
+}
+
+
+body {
+   font-family: Georgia;
    color: #000;
    background-color: #ffffff;
 }
@@ -25,9 +63,20 @@ body {
 }
 
 
-.logo {
+.logo{
    height: 40px;
 }
+
+.logo1{
+   margin-top: -20px;
+   margin-bottom: 20px;
+   height: 40px; 
+   background-image: url("https://logos-download.com/wp-content/uploads/2016/11/X_Games_logo_logotipo.png");
+   background-repeat: repeat-x;
+   background-size: 100px; 
+   background-position: left; 
+}
+
 
 .menu-icon {
    font-size: 1.5rem;
@@ -88,10 +137,11 @@ body {
 .hero {
    padding: 7rem 1rem 3rem;
    background-color: #ffffff;
+   
 }
 
 .hero h1 {
-   font-size: 1.5rem;
+   font-size: 3rem;
    font-weight: bold;
 }
 
@@ -100,30 +150,51 @@ body {
    font-weight: bold;
 }
 
+
+.events .highlight{
+   color: red;
+   font-weight: bold;
+}
+
+
+.info .highlight{
+   color: red;
+   font-weight: bold;
+}
+
 /* Grille pour les événements */
 .events, .past-events {
+   font-size: 20px;
    padding: 1.5rem 1rem;
 }
 
 .events h2 {
-   font-size: 1.25rem;
+   font-size: 2.5rem;
    margin-bottom: 1rem;
 }
 
 
+.past-events .grid{
+   margin-top: 15px;
+}
+
+
 .events .highlight {
+   color: red;
+   font-weight: bold;
+}
+
+.past-events .highlight {
+
    color: #E31936;
    font-weight: bold;
 }
 
-.grid {
-   display: grid;
-   grid-template-columns: 1fr 1fr;
-   gap: 0.5rem;
-}
+
 
 .image-placeholder {
-   aspect-ratio: 1/1;
+  
+   aspect-ratio: 2/1;
    background-image: url('https://metrolinktrains.com/globalassets/explore/ventura/2024_explorexgamesreplacement.jpg');
    background-size: cover;
    background-position: center;
@@ -131,9 +202,167 @@ body {
 }
 
 
+.image-eau{
+   aspect-ratio: 2/1;
+   background-image: url('https://res.cloudinary.com/funbooker/image/upload/ar_16:9,c_fill/v1701270439/blog_wordpress/rafting.jpg');
+   background-size: cover;
+   background-position: center;
+   border-radius: 8px;
+}
+
+.image-sky {
+   aspect-ratio: 1/1;
+   background-image: url('https://res.cloudinary.com/funbooker/images/w_1440,h_720,c_scale/f_auto,q_auto/v1631710055/blog_wordpress/shutterstock_320784014/shutterstock_320784014.png?_i=AA');
+   background-size: cover;
+   background-position: center;
+   border-radius: 8px;
+}
+
+.image-neige{
+   aspect-ratio: 1/1;
+   background-image: url('https://blogimages.rmiguides.com/Archived/RainierAll_Archived/Okita_Brent_ESSM052718_ice-climbing.jpg');
+   background-position: center;
+   background-size: cover;
+   border-radius: 8px;
+}
+
+ 
+.grid{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 30px;
+   width: 100%;
+   margin-top: 10px;
+
+   .i0{
+      display: grid;
+      position: relative;
+      place-content: center;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      height: 250px;
+      width: 725px;
+   }
+   .texte{
+     
+      z-index: 1;
+      position: absolute;
+      text-align: center;
+      font-family: Georgia;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      top: 65%;
+      color: white;
+      width: 70%;
+            
+   }
+   .texte1{
+      font-size: 1rem;
+      z-index: 1;
+      position: absolute;
+      text-align: center;
+      font-family: Georgia;
+      margin: 0 auto;
+      left: -80%;
+      right: 0;
+      top: 85%;
+      color: rgb(255, 0, 0);
+      width: 70%;
+       }
+
+   .texte2{
+      font-size: 1rem;
+       z-index: 1;
+       position: absolute;
+       
+       text-align: center;
+       font-family: Georgia;
+         margin: 0 auto;
+         left: 50%;
+         right: 0;
+         top: 85%;
+         color: rgb(255, 0, 0);
+         width: 70%;
+          }
+      
+   .i1{
+      display: grid;
+      place-content: center;
+      grid-row-start: 2;
+      grid-row-end: 3;
+      height: 200px;
+      width: 100%;
+   }
+
+   .i2{ 
+      display: grid;
+      place-content: center;
+      grid-row-start: 3;
+      grid-row-end: 11;
+      height: 200px;
+      width: 100%;
+   }
+
+   .i3{
+      display: grid;
+      place-content: center;
+      grid-row-start: 2;
+      grid-row-end: 11;
+      height: 430px;
+      width: 295px;
+   }
+   
+}
+
+.grid1{
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 30px;
+   width: 100%;
+   margin-top: 10px;
+
+   .i0{
+      display: grid;
+      place-content: center;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      height: 300px;
+      width: 725px;
+   }
+
+   .i1{
+      display: grid;
+      place-content: center;
+      grid-row-start: 1;
+      grid-row-end: 3;
+      height: 200px;
+   }
+
+   .i2{ 
+      display: grid;
+      place-content: center;
+      grid-row-start: 3;
+      grid-row-end: 11;
+      height: 200px;
+   }
+
+   .i3{
+      display: grid;
+      place-content: center;
+      grid-row-start: 1;
+      grid-row-end: 11;
+      height: 430px;
+      width: 295px;
+   }
+}
+
+
+
 .btn {
    display: block;
    margin: 1rem auto;
+   margin-bottom: -0.25rem;
    padding: 0.75rem;
    width: 100%;
    max-width: 300px;
@@ -155,15 +384,31 @@ body {
    padding: 1.5rem 1rem;
 }
 
+
 .info ul {
    list-style-type: none;
-   margin-top: 1rem;
+   margin: 1rem;
 }
 
 .info ul li {
-   margin-bottom: 0.5rem;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+   align-items: center;
+   margin-right: 80px;
 }
 
+.fleche{
+ margin-right: 65px;
+}
+
+.info h3{
+   font-size: 30px;
+   margin: 2rem;
+}
+
+.info p{
+   font-size: 1.5rem;
+}
 
 .footer {
    text-align: center;
@@ -181,4 +426,12 @@ body {
 
 .footer .social-links a:hover {
    text-decoration: underline;
+}
+.social-links{
+   margin: 20px;
+}
+   
+.fa-instagram {
+   background: #125688;
+   color: white;
 }
