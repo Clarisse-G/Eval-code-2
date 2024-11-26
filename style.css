@@ -118,16 +118,12 @@ body {
    text-align: center;
    padding: 1.5rem 1rem;
    background-color: #000;
-   color: #fff;
 }
 
 .footer .social-links a {
    display: inline-block;
    margin: 0.5rem;
-   color: #fff;
    text-decoration: none;
+   padding-inline: 1rem;
 }
 
-.footer .social-links a:hover {
-   text-decoration: underline;
-}
