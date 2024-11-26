@@ -82,6 +82,57 @@ body {
    font-size: 1.5rem;
 }
 
+.menu-icon{
+    height: 60px;
+    list-style: none;
+    padding: 10px;
+    margin: 40px;
+}
+
+.menu-icon li {
+    float: left;
+    width: 200px;
+}
+
+.menu-icon li a:link, .menu-icon li a:visited {
+    display: block;
+    color: #FFF;
+    padding: 6px 10px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu-icon li a:hover {background-color: #FF0000;}
+.menu-icon li a:active {background-color: #FF0000;}
+
+.menu-icon .sousmenu {
+    list-style-type: none;
+    display: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+.menu-icon .sousmenu li {
+    float: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-icon .sousmenu li a:link, .menu li a:visited {
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    background-color: #CBCBCB;
+}
+
+.menu-icon .sousmenu li a:hover {
+    background-color: #FF0000;
+}
+
+.menu-icon li:hover .sousmenu {
+    display: block;
+}
 
 .hero {
    padding: 7rem 1rem 3rem;
@@ -368,24 +419,11 @@ body {
    text-align: center;
    padding: 1.5rem 1rem;
    background-color: #000;
-   color: #fff;
 }
 
 .footer .social-links a {
    display: inline-block;
    margin: 0.5rem;
-   color: #fff;
    text-decoration: none;
-}
-
-.footer .social-links a:hover {
-   text-decoration: underline;
-}
-.social-links{
-   margin: 20px;
-}
-   
-.fa-instagram {
-   background: #125688;
-   color: white;
+   padding-inline: 1rem;
 }
