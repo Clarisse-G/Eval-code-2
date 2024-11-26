@@ -139,7 +139,12 @@ body {
    font-weight: bold;
 }
 
-
+.info {
+   padding: 1.5rem 1rem;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
 
 .image-placeholder {
   
