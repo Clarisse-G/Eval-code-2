@@ -190,7 +190,12 @@ body {
    font-weight: bold;
 }
 
-
+.info {
+   padding: 1.5rem 1rem;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
 
 .image-placeholder {
   
@@ -414,24 +419,11 @@ body {
    text-align: center;
    padding: 1.5rem 1rem;
    background-color: #000;
-   color: #fff;
 }
 
 .footer .social-links a {
    display: inline-block;
    margin: 0.5rem;
-   color: #fff;
    text-decoration: none;
-}
-
-.footer .social-links a:hover {
-   text-decoration: underline;
-}
-.social-links{
-   margin: 20px;
-}
-   
-.fa-instagram {
-   background: #125688;
-   color: white;
+   padding-inline: 1rem;
 }
