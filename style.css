@@ -436,3 +436,9 @@ body {
    padding-inline: 10rem;
    padding-top: 2rem;
 }
+
+
+html {
+   --scroll-behavior: smooth;
+   scroll-behavior: smooth;
+}
