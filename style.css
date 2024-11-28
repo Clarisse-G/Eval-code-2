@@ -1,23 +1,19 @@
+:root {
+   --ecriture: #000;
+   --background: #ffffff;
+}
+
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
 
-/* styles.css */
-:root {
-   --background-light: #ffffff;
-   --text-light: #000000;
-   --background-dark: #000000;
-   --text-dark: #ffffff;
-}
-
-/* Mode clair (par défaut) */
 body .header .footer{
    display: flex;
    flex: 1;
-   background-color: var(--background-light);
-   color: var(--text-light);
+   background-color: var(--background);
+   color: var(--ecriture);
    font-family: Arial, sans-serif;
    margin: 0;
    padding: 0;
@@ -435,4 +431,24 @@ body {
    display: inline-block;
    padding-inline: 10rem;
    padding-top: 2rem;
+}
+
+.switchTheme {
+
+   margin-top: 1rem;
+   display: block;
+   margin: 1rem auto;
+   margin-bottom: -0.25rem;
+   padding: 0.75rem;
+   background-color: #E31936;
+   color: #ffffff;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 100%;
+   max-width: 300px;
+   text-align: center;
+   border: none;
+   border-radius: 5px;
+   font-weight: bold;
+   cursor: pointer;
+
 }
