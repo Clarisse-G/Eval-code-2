@@ -80,6 +80,32 @@
            <p>Privacy Policy</p>    
            <p>Term Of Use</p>
         </div>
+       
+        <button class="switchTheme">Changer le theme</button>
+
+        <script>
+
+            const switchThemeBtn = document.queryselector('.switchTheme')
+            let toggleTheme = 0;
+
+            switchThemeBtn.addEventListener ('click',) ; {
+
+                if(toggleTheme=== 0) {
+
+                    document.documentElement.style.setProperty('--ecriture', '#ffffff');
+                    document.documentElement.style.setProperty('--background', '#000000');
+                    toggleTheme++
+
+                } else {
+
+                    document.documentElement.style.setProperty('--ecriture', '#000000');
+                    document.documentElement.style.setProperty('--background', '#ffffff');
+                    toggleTheme--
+
+                }
+            }
+
+        </script>
    </footer>
 </body>
 </html>
