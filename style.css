@@ -1,51 +1,42 @@
+
+
+:root {
+   --light-background: #ffffff;
+   --light-text: #000000;
+   --dark-background: #121212;
+   --dark-text: #ffffff;
+   --highlight-color: #E31936;
+}
+
 * {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
 }
 
-/* styles.css */
-:root {
-   --background-light: #ffffff;
-   --text-light: #000000;
-   --background-dark: #000000;
-   --text-dark: #ffffff;
-}
-
-/* Mode clair (par défaut) */
-body .header .footer{
-   display: flex;
-   flex: 1;
-   background-color: var(--background-light);
-   color: var(--text-light);
-   font-family: Arial, sans-serif;
-   margin: 0;
-   padding: 0;
-}
-
-header, footer {
-   padding: 1rem;
-   text-align: center;
-   background-color: var(--background-light);
-}
-
-/* Mode sombre */
-@media (prefers-color-scheme: dark) {
-   body {
-       background-color: var(--background-dark);
-       color: var(--text-dark);
-   }
-
-   header, footer {
-       background-color: var(--background-dark);
-   }
-}
-
-
 body {
    font-family: Georgia;
-   color: #000;
-   background-color: #ffffff;
+   color: var(--light-text);
+   background-color: var(--light-background);
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+   color: var(--dark-text);
+   background-color: var(--dark-background);
+}
+
+.header, .footer {
+   background-color: var(--light-background);
+   color: var(--light-text);
+   padding: 1rem;
+   text-align: center;
+   position: relative;
+}
+
+body.dark-mode, body.dark-mode {
+   background-color: var(--dark-background);
+   color: var(--dark-text);
 }
 
 .header {
@@ -53,16 +44,67 @@ body {
    flex: 1;
    justify-content: space-between;
    align-items: center;
-   background-color: #000000;
-   color: #fff;
-   padding: 0rem;
+   padding: 1rem;
+   z-index: 1000;
    position: fixed;
    top: 0;
    width: 100%;
-   z-index: 1000;
-   filter: drop-shadow(0px 5px 8px #E31936);
+   background-color: #000;
+   box-shadow: #E31936 0 4px 8px;
 }
 
+header a, footer a {
+   color: inherit;
+   text-decoration: none;
+}
+
+.hero {
+   padding: 10rem 1rem 3rem;
+   background-color: var(--light-background);
+}
+
+
+body.dark-mode .hero {
+   background-color: #121212;
+}
+
+.highlight {
+   color: var(--highlight-color);
+}
+
+button.switchTheme {
+   margin-top: 1rem;
+   display: block;
+   margin: 1rem auto;
+   padding: 0.75rem;
+   background-color: var(--highlight-color);
+   color: #ffffff;
+   font-family: Arial, Helvetica, sans-serif;
+   max-width: 300px;
+   text-align: center;
+   border: none;
+   border-radius: 5px;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+button.switchTheme:hover {
+   background-color: darkred;
+}
+
+/* Custom grid and other styles */
+.grid, .grid1 {
+   display: grid;
+   gap: 30px;
+   margin-top: 10px;
+   grid-template-columns: 1fr 1fr;
+}
+
+
+html {
+   --scroll-behavior: smooth;
+   scroll-behavior: smooth;
+}
 
 .logo{
    padding-left: 2rem;
@@ -194,10 +236,11 @@ body {
 
 .info {
    padding: 1.5rem 1rem;
-   background-color: black;
+   background-color: var(--dark-background);
    color: white;
    text-align: center;
 }
+
 
 .image-placeholder {
   
@@ -270,6 +313,7 @@ body {
    top: 65%;
    color: white;
    width: 70%;
+   font-family: Arial, Helvetica, sans-serif;
          
 }
 .texte1{
@@ -277,7 +321,7 @@ body {
    z-index: 1;
    position: absolute;
    text-align: center;
-   font-family: Georgia;
+   font-family: Arial, Helvetica, sans-serif;
    margin: 0 auto;
    left: -80%;
    right: 0;
@@ -292,7 +336,7 @@ body {
     position: absolute;
     
     text-align: center;
-    font-family: Georgia;
+    font-family: Arial, Helvetica, sans-serif;
       margin: 0 auto;
       left: 50%;
       right: 0;
@@ -487,18 +531,43 @@ body {
    margin: 0.5rem;
    text-decoration: none;
    padding-inline: 2rem;
-   padding-bottom: 1rem;
+   padding-bottom: 2rem;
    align-content: center;
 }
 
 .footer .social-links p {
    display: inline-block;
-   padding-inline: 10rem;
-   padding-top: 2rem;
+   padding-inline: 2rem;
+   padding-top: 1rem;
+}
+
+.textloi {
+   margin-top: 2rem;
+   background-color: #000;
+   display: inline-block;
+}
+
+.switchTheme {
+
+   margin-top: 1rem;
+   display: block;
+   margin: 1rem auto;
+   margin-bottom: -0.25rem;
+   padding: 0.75rem;
+   background-color: #E31936;
+   color: #ffffff;
+   font-family: Arial, Helvetica, sans-serif;
+   width: 100%;
+   max-width: 300px;
+   text-align: center;
+   border: none;
+   border-radius: 5px;
+   font-weight: bold;
+   cursor: pointer;
+
 }
 
 
-html {
-   --scroll-behavior: smooth;
-   scroll-behavior: smooth;
-}
+
+
+
