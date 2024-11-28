@@ -64,7 +64,8 @@ body {
 
 
 .logo{
-   height: 40px;
+   padding-left: 2rem;
+   height: 5rem;
 }
 
 .logo1{
@@ -484,4 +485,10 @@ body {
    display: inline-block;
    padding-inline: 10rem;
    padding-top: 2rem;
+}
+
+
+html {
+   --scroll-behavior: smooth;
+   scroll-behavior: smooth;
 }
