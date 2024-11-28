@@ -1,6 +1,11 @@
+
+
 :root {
-   --ecriture: #000;
-   --background: #ffffff;
+   --light-background: #ffffff;
+   --light-text: #000000;
+   --dark-background: #121212;
+   --dark-text: #ffffff;
+   --highlight-color: #E31936;
 }
 
 * {
@@ -9,55 +14,94 @@
    box-sizing: border-box;
 }
 
-body .header .footer{
-   display: flex;
-   flex: 1;
-   background-color: var(--background);
-   color: var(--ecriture);
-   font-family: Arial, sans-serif;
-   margin: 0;
-   padding: 0;
-}
-
-header, footer {
-   padding: 1rem;
-   text-align: center;
-   background-color: var(--background-light);
-}
-
-/* Mode sombre */
-@media (prefers-color-scheme: dark) {
-   body {
-       background-color: var(--background-dark);
-       color: var(--text-dark);
-   }
-
-   header, footer {
-       background-color: var(--background-dark);
-   }
-}
-
-
 body {
    font-family: Georgia;
-   color: #000;
-   background-color: #ffffff;
+   color: var(--light-text);
+   background-color: var(--light-background);
+   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+   color: var(--dark-text);
+   background-color: var(--dark-background);
+}
+
+.header, .footer {
+   background-color: var(--light-background);
+   color: var(--light-text);
+   padding: 1rem;
+   text-align: center;
+   position: relative;
+}
+
+body.dark-mode .header, body.dark-mode .footer {
+   background-color: var(--dark-background);
+   color: var(--dark-text);
 }
 
 .header {
    display: flex;
    justify-content: space-between;
    align-items: center;
-   background-color: #000000;
-   color: #fff;
-   padding: 0rem;
+   padding: 1rem;
+   z-index: 1000;
    position: fixed;
    top: 0;
    width: 100%;
-   z-index: 1000;
-   filter: drop-shadow(0px 5px 8px #E31936);
+   background-color: var(--light-background);
 }
 
+header a, footer a {
+   color: inherit;
+   text-decoration: none;
+}
+
+.hero {
+   padding: 10rem 1rem 3rem;
+   background-color: var(--light-background);
+}
+
+body.dark-mode .hero {
+   background-color: #333;
+}
+
+.highlight {
+   color: var(--highlight-color);
+}
+
+button.switchTheme {
+   margin-top: 1rem;
+   display: block;
+   margin: 1rem auto;
+   padding: 0.75rem;
+   background-color: var(--highlight-color);
+   color: #ffffff;
+   font-family: Arial, Helvetica, sans-serif;
+   max-width: 300px;
+   text-align: center;
+   border: none;
+   border-radius: 5px;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+button.switchTheme:hover {
+   background-color: darkred;
+}
+
+/* Custom grid and other styles */
+.grid, .grid1 {
+   display: grid;
+   gap: 30px;
+   margin-top: 10px;
+   grid-template-columns: 1fr 1fr;
+}
+
+
+html {
+   --scroll-behavior: smooth;
+   scroll-behavior: smooth;
+}
 
 .logo{
    padding-left: 2rem;
@@ -502,3 +546,8 @@ body {
    cursor: pointer;
 
 }
+
+
+
+
+
