@@ -34,7 +34,7 @@ body.dark-mode {
    position: relative;
 }
 
-body.dark-mode .header, body.dark-mode .footer {
+body.dark-mode, body.dark-mode {
    background-color: var(--dark-background);
    color: var(--dark-text);
 }
@@ -48,7 +48,8 @@ body.dark-mode .header, body.dark-mode .footer {
    position: fixed;
    top: 0;
    width: 100%;
-   background-color: var(--light-background);
+   background-color: #000;
+   box-shadow: #E31936 0 4px 8px;
 }
 
 header a, footer a {
@@ -61,8 +62,9 @@ header a, footer a {
    background-color: var(--light-background);
 }
 
+
 body.dark-mode .hero {
-   background-color: #333;
+   background-color: #121212;
 }
 
 .highlight {
@@ -233,10 +235,11 @@ html {
 
 .info {
    padding: 1.5rem 1rem;
-   background-color: black;
+   background-color: var(--dark-background);
    color: white;
    text-align: center;
 }
+
 
 .image-placeholder {
   
@@ -310,6 +313,7 @@ html {
    top: 65%;
    color: white;
    width: 70%;
+   font-family: Arial, Helvetica, sans-serif;
          
 }
 .texte1{
@@ -317,7 +321,7 @@ html {
    z-index: 1;
    position: absolute;
    text-align: center;
-   font-family: Georgia;
+   font-family: Arial, Helvetica, sans-serif;
    margin: 0 auto;
    left: -80%;
    right: 0;
@@ -332,7 +336,7 @@ html {
     position: absolute;
     
     text-align: center;
-    font-family: Georgia;
+    font-family: Arial, Helvetica, sans-serif;
       margin: 0 auto;
       left: 50%;
       right: 0;
@@ -517,14 +521,20 @@ html {
    margin: 0.5rem;
    text-decoration: none;
    padding-inline: 2rem;
-   padding-bottom: 1rem;
+   padding-bottom: 2rem;
    align-content: center;
 }
 
 .footer .social-links p {
    display: inline-block;
-   padding-inline: 10rem;
-   padding-top: 2rem;
+   padding-inline: 2rem;
+   padding-top: 1rem;
+}
+
+.textloi {
+   margin-top: 2rem;
+   background-color: #000;
+   display: inline-block;
 }
 
 .switchTheme {
