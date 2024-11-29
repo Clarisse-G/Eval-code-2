@@ -421,7 +421,7 @@ html {
    background-size: cover;
    background-position: center;
    border-radius: 8px;
-}
+
   
 
    .i1 {
@@ -496,6 +496,7 @@ html {
       }
    }
 }
+
 
 
 @media (min-width: 800px) {
@@ -645,3 +646,45 @@ html {
 
 }
 
+
+details {
+   font-size: 1rem;
+   margin-top: 10px;
+}
+
+summary {
+   cursor: pointer;
+   font-weight: bold;
+   color: var(--highlight-color);
+   display: flex;
+   align-items: center;
+}
+
+summary:hover {
+   color: darkred;
+}
+
+.dropdown {
+   list-style-type: none;
+   padding-left: 20px;
+   margin-top: 10px;
+}
+
+.dropdown li {
+   font-size: 1rem;
+   color: #000;
+   padding: 5px 0;
+}
+
+.dropdown li:hover {
+   color: var(--highlight-color);
+}
+
+
+details[open] .dropdown {
+   display: block;
+}
+
+details:not([open]) .dropdown {
+   display: none;
+}
