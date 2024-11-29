@@ -562,12 +562,14 @@ html {
    padding-inline: 2rem;
    padding-bottom: 2rem;
    align-content: center;
+   background-color: #000;
 }
 
 .footer .social-links p {
    display: inline-block;
    padding-inline: 2rem;
    padding-top: 1rem;
+   background-color: #000;
 }
 
 .textloi {
