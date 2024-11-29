@@ -91,13 +91,6 @@ button.switchTheme:hover {
    background-color: darkred;
 }
 
-.grid {
-   display: grid;
-   gap: 1rem;
-   margin-top: 1rem;
-   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr))
-}
-
 .image-placeholder, .image-eau, .image-sky, .image-neige {
    aspect-ratio: 1/1;
    background-size: cover;
@@ -108,11 +101,17 @@ button.switchTheme:hover {
 nd other styles */
 .grid, .grid1 {
    display: grid;
-   gap: 30px;
-   margin-top: 10px;
-   grid-template-columns: 1fr 1fr;
+   gap: 1rem;
+   margin-top: 1rem;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+.i0, .i1, .i2, .i3 {
+   aspect-ratio: 1/1;
+   background-size: cover;
+   background-position: center;
+   border-radius: 8px;
+}
 
 html {
    --scroll-behavior: smooth;
@@ -405,7 +404,8 @@ html {
    grid-row-start: 3;
    grid-row-end: 11;
    height: auto
-   background-size : cover; 
+   aspect-ratio: 1/1;
+   background-size: cover;
   }
 
    .i1 {
