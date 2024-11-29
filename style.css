@@ -387,7 +387,7 @@ html {
    grid-row-start: 3;
    grid-row-end: 11;
    height: auto
-   background-size: cover; 
+   background-size : cover; 
   }
 
    .i1 {
