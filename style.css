@@ -8,6 +8,18 @@
    --highlight-color: #E31936;
 }
 
+:root {
+   --spacing-between-sections: 40px;
+ }
+ 
+ .header {
+   margin-bottom: var(--spacing-between-sections);
+ }
+ 
+ .hero {
+   margin-top: var(--spacing-between-sections);
+ }
+
 * {
    margin: 0;
    padding: 0;
@@ -406,7 +418,10 @@ html {
    height: auto
    aspect-ratio: 1/1;
    background-size: cover;
-  }
+   background-position: center;
+   border-radius: 8px;
+}
+  
 
    .i1 {
       grid-row-start:  1;
