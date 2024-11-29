@@ -116,6 +116,7 @@ nd other styles */
    gap: 1rem;
    margin-top: 1rem;
    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+   padding: 1.5rem 1rem;
 }
 
 .i0, .i1, .i2, .i3 {
@@ -285,7 +286,7 @@ html {
 }
 
 .image-sky {
-   aspect-ratio: 1/1;
+   aspect-ratio: 16/9;
    background-image: url("images/sky image.png");
    background-size: cover;
    background-position: center;
